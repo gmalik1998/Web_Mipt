@@ -5,7 +5,8 @@ import (
 )
 
 func RemoveEven(num []int) []int {
-	nums = copy(num)
+	var nums []int;
+	copy(nums, num)
 	for i:=0; i<len(nums); i++ {
 	    nums = append(nums[:i], nums[i+1:]...)
 	}
