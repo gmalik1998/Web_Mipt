@@ -5,10 +5,11 @@ import (
 )
 
 func RemoveEven(num []int) []int {
-	for i:=0; i<len(num); i++ {
-	    num = append(num[:i], num[i+1:]...)
+	nums = copy(num)
+	for i:=0; i<len(nums); i++ {
+	    nums = append(nums[:i], nums[i+1:]...)
 	}
-	return num
+	return nums
 }
 
 func PowerGenerator(step int) func() int{
