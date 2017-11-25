@@ -5,10 +5,10 @@ import (
 )
 
 func RemoveEven(num []int) []int {
-	nums := make([]int, len(num)/2, (cap(num)+1) * 2)
+	nums := make([]int, 1)
 	for i:=0; i<len(num); i++ {
-	    if i % 2 == 1 {
-	    nums[(i- 1)/2] = num[i]
+	    if num[i] % 2 == 1 {
+	    append(nums, num[i])
 	}
 	}
 	return nums
