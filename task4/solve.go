@@ -37,7 +37,7 @@ func DifferentWordsCount(a string) int {
 	}
 
 	if len(temp) > 0 {
-		answer[temp] = 1
+		answer[strings.ToUpper(temp)] = 1
 	}
 
 	return len(answer)
