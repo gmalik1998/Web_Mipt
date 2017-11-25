@@ -5,14 +5,15 @@ import (
 )
 
 func RemoveEven(num []int) []int {
-	nums := make([]int, 1)
+	nums := make([]int, 0)
 	for i:=0; i<len(num); i++ {
 	    if num[i] % 2 == 1 {
-	    append(nums, num[i])
+	    nums = append(nums, num[i])
 	}
 	}
 	return nums
 }
+
 
 func PowerGenerator(step int) func() int{
 	sum := 1
