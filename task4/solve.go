@@ -2,14 +2,14 @@ package main
 import (
 	 "unicode"
 	"strings"
-	
 )
 
 func RemoveEven(num []int) []int {
-	nums := make([]int, len(num), (cap(num)+1)*2)
-	copy(nums, num)
-	for i:=0; i<len(nums); i++ {
-	    nums = append(nums[:i], nums[i+1:]...)
+	nums := make([]int, len(num)/2, (cap(num)+1) * 2)
+	for i:=0; i<len(num); i++ {
+	    if i % 2 == 1 {
+	    nums[(i- 1)/2] = num[i]
+	}
 	}
 	return nums
 }
@@ -43,8 +43,9 @@ func DifferentWordsCount(a string) int {
 }
 /*
 func main() {
-input := []int{0, 3, 2, 5}
+input := []int{0, 3, 2, 5, 7, 8}
 result := RemoveEven(input)
 fmt.Println(result) // Должно напечататься [3 5]
 }
 */
+
